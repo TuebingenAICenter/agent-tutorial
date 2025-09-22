@@ -9,17 +9,16 @@ All code and materials are provided to facilitate a hands-on learning experience
 ## Quick start
 All the sessions can be run in Google Colab. Click on the icons below to open the respective notebooks in Colab and get started.
 
-|Session|Notebook|Colab|
-|:---|:---|:---:|
-|Intro to langgraph| [`01_basic_langgraph_chatbot.ipynb`](./01_basic_langgraph_chatbot.ipynb) | [![Open in Colab][colab-badge]](https://colab.research.google.com/github/TuebingenAICenter/agent-tutorial/blob/main/01_basic_langgraph_chatbot.ipynb)|
-|Langgraph fundamentals| [`02_chat_with_pdfs_and_youtube_scaffolded.ipynb`](./02_chat_with_pdfs_and_youtube_scaffolded.ipynb) | [![Open in Colab][colab-badge]](https://colab.research.google.com/github/TuebingenAICenter/agent-tutorial/blob/main/02_chat_with_pdfs_and_youtube_scaffolded.ipynb)|
-| Fundamentals (filled)| [`02_chat_with_pdfs_and_youtube.ipynb`](./02_chat_with_pdfs_and_youtube.ipynb) | [![Open in Colab][colab-badge]](https://colab.research.google.com/github/TuebingenAICenter/agent-tutorial/blob/main/02_chat_with_pdfs_and_youtube.ipynb)|
-|MCP| [`mcp_colab.ipynb`](./mcp/mcp_colab.ipynb) | [![Open in Colab][colab-badge]](https://colab.research.google.com/github/TuebingenAICenter/agent-tutorial/blob/main/mcp/mcp_colab.ipynb)|
-|Orchestration| [`03_deepresearch.ipynb`](./03_deepresearch_scaffolded.ipynb) | [![Open in Colab][colab-badge]](https://colab.research.google.com/github/TuebingenAICenter/agent-tutorial/blob/main/03_deepresearch_scaffolded.ipynb)|
+|Session|Notebook/Folder name|Code along|Full solution|
+|:---|:---|:---:|:---:|
+|Intro to langgraph| `01_basic_langgraph_chatbot` | - |[![Open in Colab][colab-badge]](https://colab.research.google.com/github/TuebingenAICenter/agent-tutorial/blob/main/01_basic_langgraph_chatbot.ipynb)|
+|Langgraph fundamentals| `02_chat_with_pdfs_and_youtube` | [![Open in Colab][colab-badge]](https://colab.research.google.com/github/TuebingenAICenter/agent-tutorial/blob/main/02_chat_with_pdfs_and_youtube_scaffolded.ipynb)| [![Open in Colab][colab-badge]](https://colab.research.google.com/github/TuebingenAICenter/agent-tutorial/blob/main/02_chat_with_pdfs_and_youtube.ipynb)|
+|MCP| `mcp/` | [![Open in Colab][colab-badge]](https://colab.research.google.com/github/TuebingenAICenter/agent-tutorial/blob/main/mcp/mcp_colab.ipynb)| - |
+|Orchestration| `03_deepresearch` | [![Open in Colab][colab-badge]](https://colab.research.google.com/github/TuebingenAICenter/agent-tutorial/blob/main/03_deepresearch_scaffolded.ipynb)| [![Open in Colab][colab-badge]](https://colab.research.google.com/github/TuebingenAICenter/agent-tutorial/blob/main/03_deepresearch.ipynb)|
 
 
 > [!NOTE]
-> Make sure to run the first cell in each notebook to install the required packages, since every Colab notebook runs in a fresh environment.
+> If using Colab, make sure to run the first cell in each notebook to install the required packages, since every Colab notebook runs in a fresh environment.
 >
 > Remember to add your API keys in the `.env` file created in the first cell.
 
@@ -43,8 +42,6 @@ For those feeling more adventurous, follow the instructions below to set up the 
     # We do recommend using python 3.12, but any version >=3.10 should work
     python3.12 -m venv .venv
     source .venv/bin/activate
-```
-```bash
     pip install -r requirements.txt
 ```
 ### uv [Recommended]
@@ -64,7 +61,7 @@ For those feeling more adventurous, follow the instructions below to set up the 
   <tr>
     <td align="center">
         <div style="width: 150px;">
-        <img src="https://tuebingen.ai/fileadmin/user_upload/Home/News/2025/2025-02-17_Peter-Gehler/PeterGehler_landscape-856px_V3A0360.jpg" alt="Peter Gehler" width="150px;">
+        <img src="https://tuebingen.ai/fileadmin/_processed_/8/f/csm_Peter-Gehler_7535770367.jpg" alt="Peter Gehler" width="150px;">
         <h4>
             <a href="https://tuebingen.ai">
                 Peter Gehler
