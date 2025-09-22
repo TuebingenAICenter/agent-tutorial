@@ -71,7 +71,8 @@ def load_youtube_hybrid(url: str, chunk_seconds: int = 120) -> List[Document]:
         raise ValueError(f"Could not extract video ID from URL: {url}")
 
     try:
-        transcript = YouTubeTranscriptApi.get_transcript(video_id)
+        # Updated API: fetch returns a FetchedTranscript with .snippets entries
+        transcript = YouTubeTranscriptApi().fetch(video_id=video_id)
     except Exception as e:
         raise Exception(f"Failed to get transcript: {e}")
 
@@ -92,17 +93,18 @@ def load_youtube_hybrid(url: str, chunk_seconds: int = 120) -> List[Document]:
 
     chunks = []
     current_chunk = {'text': '', 'start_time': 0, 'end_time': 0}
-    for entry in transcript:
-        if entry['start'] - current_chunk['start_time'] >= chunk_seconds and current_chunk['text']:
+    # Updated API iteration: iterate over transcript.snippets with attribute access
+    for entry in transcript.snippets:
+        if entry.start - current_chunk['start_time'] >= chunk_seconds and current_chunk['text']:
             chunks.append(current_chunk.copy())
             current_chunk = {
-                'text': entry['text'],
-                'start_time': entry['start'],
-                'end_time': entry['start'] + entry['duration']
+                'text': entry.text,
+                'start_time': entry.start,
+                'end_time': entry.start + entry.duration
             }
         else:
-            current_chunk['text'] += ' ' + entry['text']
-            current_chunk['end_time'] = entry['start'] + entry['duration']
+            current_chunk['text'] += ' ' + entry.text
+            current_chunk['end_time'] = entry.start + entry.duration
     if current_chunk['text']:
         chunks.append(current_chunk)
 
