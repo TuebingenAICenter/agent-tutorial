@@ -1,11 +1,14 @@
+# uv # needed for conda installation
 chromadb
 click
 fastmcp
 git+https://github.com/robinruff/mcphost.git
+grandalf
 ipykernel
 langchain_community
 langchain-chroma
 langchain-core
+langchain-huggingface
 langchain-mcp-adapters
 langchain-openai
 langgraph
@@ -14,10 +17,9 @@ pydantic
 pypdf
 python-dotenv
 rich
+sentence-transformers
 tavily-python
-# uv # needed for conda installation
+uv
 watchdog
 youtube_transcript_api
 yt-dlp
-langchain-huggingface
-sentence-transformers
