@@ -7,6 +7,10 @@ from langchain_community.document_loaders import PyPDFLoader
 
 import yt_dlp
 from youtube_transcript_api import YouTubeTranscriptApi
+from pypdf import PdfReader
+from urllib.parse import urlparse
+from urllib.request import urlopen
+from io import BytesIO
 
 
 def _slug(text: str) -> str:
@@ -135,7 +139,51 @@ def get_documents(source, doc_type):
     elif doc_type == "pdf":
         loader = PyPDFLoader(source)
         documents = loader.load()
-        title = os.path.basename(source).replace('.pdf', '')
+
+        # Prefer embedded PDF metadata title; fallback to filename/URL segment
+        title = None
+        try:
+            if isinstance(source, str) and (source.startswith("http://") or source.startswith("https://")):
+                try:
+                    with urlopen(source) as resp:
+                        data = resp.read()
+                    reader = PdfReader(BytesIO(data))
+                except Exception:
+                    reader = None
+                # Fallback filename from URL path if no metadata title
+                url_path = urlparse(source).path or ""
+                url_basename = os.path.basename(url_path)
+                if not title and url_basename:
+                    title = url_basename
+            else:
+                try:
+                    reader = PdfReader(source)
+                except Exception:
+                    reader = None
+
+            meta_title = None
+            if reader:
+                md = getattr(reader, "metadata", None)
+                if md is not None:
+                    # Try pypdf's attribute access first, then dict-style key
+                    meta_title = getattr(md, "title", None)
+                    if not meta_title and isinstance(md, dict):
+                        meta_title = md.get("/Title")
+            if meta_title:
+                meta_title = str(meta_title).strip()
+                if meta_title:
+                    title = meta_title
+        except Exception:
+            # Ignore metadata errors; we'll fallback below
+            pass
+
+        if not title:
+            # Local file fallback
+            title = os.path.basename(source)
+
+        # Normalize common extension casing
+        if title.lower().endswith(".pdf"):
+            title = title[: -4]
         uploader = None
         doc_key = build_doc_key('pdf', title)
     else:
