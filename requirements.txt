@@ -1,0 +1,21 @@
+chromadb
+click
+fastmcp
+git+https://github.com/robinruff/mcphost.git
+ipykernel
+langchain_community
+langchain-chroma
+langchain-core
+langchain-mcp-adapters
+langchain-openai
+langgraph
+prompt_toolkit
+pydantic
+pypdf
+python-dotenv
+rich
+tavily-python
+# uv # needed for conda installation
+watchdog
+youtube_transcript_api
+yt-dlp

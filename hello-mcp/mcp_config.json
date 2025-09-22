@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "research": {
+      "command": "uv",
+      "args": [
+        "run",
+        "./web_resource_rag/server.py",
+        "--directory=/tmp/web_resource_rag/"
+      ],
+      "transport": "stdio"
+    }
+  }
+}
