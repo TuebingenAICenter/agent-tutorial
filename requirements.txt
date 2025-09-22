@@ -19,3 +19,5 @@ tavily-python
 watchdog
 youtube_transcript_api
 yt-dlp
+langchain-huggingface
+sentence-transformers
