@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "research": {
+      "command": "uv",
+      "args": [
+        "run",
+        "./filesystem_rag/server.py",
+        "--directory=/tmp/filesystem_rag/"
+      ],
+      "transport": "stdio"
+    }
+  }
+}
