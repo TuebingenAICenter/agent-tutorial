@@ -13,7 +13,7 @@ All the sessions can be run in Google Colab. Click on the icons below to open th
 |:---|:---|:---:|:---:|
 |Intro to langgraph| `01_basic_langgraph_chatbot` | - |[![Open in Colab][colab-badge]](https://colab.research.google.com/github/TuebingenAICenter/agent-tutorial/blob/main/01_basic_langgraph_chatbot.ipynb)|
 |Langgraph fundamentals| `02_chat_with_pdfs_and_youtube` | [![Open in Colab][colab-badge]](https://colab.research.google.com/github/TuebingenAICenter/agent-tutorial/blob/main/02_chat_with_pdfs_and_youtube_scaffolded.ipynb)| [![Open in Colab][colab-badge]](https://colab.research.google.com/github/TuebingenAICenter/agent-tutorial/blob/main/02_chat_with_pdfs_and_youtube.ipynb)|
-|MCP| `mcp/` | [![Open in Colab][colab-badge]](https://colab.research.google.com/github/TuebingenAICenter/agent-tutorial/blob/main/mcp/mcp_colab.ipynb)| - |
+|MCP| `hello-mcp/` | [![Open in Colab][colab-badge]](https://colab.research.google.com/github/TuebingenAICenter/agent-tutorial/blob/main/hello-mcp/mcp_colab.ipynb)| - |
 |Orchestration| `03_deepresearch` | [![Open in Colab][colab-badge]](https://colab.research.google.com/github/TuebingenAICenter/agent-tutorial/blob/main/03_deepresearch_scaffolded.ipynb)| [![Open in Colab][colab-badge]](https://colab.research.google.com/github/TuebingenAICenter/agent-tutorial/blob/main/03_deepresearch.ipynb)|
 
 
