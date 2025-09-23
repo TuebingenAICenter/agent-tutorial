@@ -89,7 +89,7 @@ For those feeling more adventurous, follow the instructions below to set up the 
                 Linus A. Schneider
             </a>
         </h4>
-        <sub><i>Researcher</i></sub>
+        <sub><i>Master's student @Uni Tuebingen</i></sub>
         </div>
     </td>
   </tr>
@@ -102,7 +102,7 @@ For those feeling more adventurous, follow the instructions below to set up the 
                 Jaisidh Singh
             </a>
         </h4>
-        <sub><i>Researcher</i></sub>
+        <sub><i>Master's student @Uni Tuebingen</i></sub>
         </div>
     </td>
     <td align="center">
